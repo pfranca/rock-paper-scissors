@@ -67,37 +67,6 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
-    for(var i = 0; i < 5; i++){
-        let playerSelection;
-        let playerSelectionLowerCase;
-        do{
-            playerSelection = prompt("Choose your weapon!");
-            playerSelectionLowerCase = playerSelection.toLowerCase();
-        }while(playerSelectionLowerCase!= "rock" && playerSelectionLowerCase!= "paper" && playerSelectionLowerCase!= "scissors")
-        let computerSelection = computerPlay();
-        console.log("You used: " + playerSelectionLowerCase);
-        console.log("Computer used: " + computerSelection);
-        let round = playRound(playerSelection, computerSelection);
-        console.log(round);
-        console.log("-------------------");
-        if(round == "You Win!") playerScore++;
-        else if(round == "You Lose!") computerScore++;
-    }
-    console.log("GAME ENDED!");
-    console.log("Your Score: "+playerScore);
-    console.log("Computer Score: "+computerScore);
-    if(playerScore > computerScore) console.log("YOU WIN");
-    else if(playerScore < computerScore) console.log("YOU LOSE");
-    else if(playerScore == computerScore) console.log("YOU TIED");
-
-}
-
-
-
 //-------------------------BUTTONS AND EVENT LISTENERS-------------------------
 const yourWeapon = document.getElementById("yourWeapon");
 const computerWeapon = document.getElementById("computerWeapon");
