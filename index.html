@@ -5,12 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>rock-paper-scissors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <h1>Rock-Paper-Scissors Javascript Console Game</h1>
-    <h2>Open your browser developer tools go to the console and play rock-paper-scissors against the computer. If you close your dialog prompt box, type "game()" without quotes on the console to start a new game</h2>
+
+    <div id="gameInfo">
+
+        <div class="score" id="yourScore">
+                <h1>Your Score</h1>
+                <h1 id="yourPoints">0</h1>
+        </div>
+        <br>
+        <div id="info">
+            <h3>You Choose: <h3 id="yourWeapon"></h3></h3> <br>
+            <h3>Computer Choose: <h3 id="computerWeapon"></h3></h3> <br>
+            <h2 id="result"></h2> <br>
+        </div>
+
+        <div class="score" id="computerScore">
+                <h1>Computer Score</h1>
+                <h1 id="computerPoints">0</h1>
+        </div>
+
+    </div>
+
+    <div id="winner">
+
+    </div>
+   
+    <div id="btnWeapon">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
     
 </body>
 </html>
